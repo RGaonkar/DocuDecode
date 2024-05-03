@@ -1,0 +1,16 @@
+Dockerfile
+
+# Exclude version control system directories
+.git/
+.gitignore
+
+# exclude python dependencies
+node_modules/
+__pycache__/
+
+# Exclude Node.js dependencies
+node_modules/
+
+# Exclude Docker compose files
+docker-compose.yml
+docker-compose.dev.yml

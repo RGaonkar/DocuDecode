@@ -1,0 +1,23 @@
+version: '3'
+services:
+  app:
+    volumes:
+      - .:/app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - "8080:5000"
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    environment:
+      - REDIS_PASSWORD
+      - OPENAI_API_KEY
+      - REDIS_HOST=client_redis
+    env_file:
+      - .env
+    depends_on:
+      - redis
+
+  redis:
+    image: redis
+    container_name: client_redis

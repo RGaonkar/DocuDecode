@@ -1,0 +1,10 @@
+quart==0.19.4
+quart-cors
+uvicorn
+python-dotenv
+ollama
+openai
+requests
+gunicorn
+redis
+unstructured[all-docs]
